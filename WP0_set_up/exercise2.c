@@ -1,5 +1,5 @@
 
-// (C) Jessie Johnsson, Lian ShiLian Shi, Yingchao Ji, group: 10 (2024)
+// (C) Jessie Johnsson, Yingchao Ji, group: 10 (2024)
 // Work package 0
 // Exercise 2
 // Submission code: XXXXXX (provided by your TA-s)
