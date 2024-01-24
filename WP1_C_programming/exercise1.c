@@ -1,3 +1,8 @@
+// (C) Jessie Johnsson, Yingchao Ji, group: 10 (2024)
+// Work package 1
+// Exercise 1
+// Submission code: xxxxxxx (provided by your TA-s)
+
 #include <stdio.h> //Include standard Input/Output header file
 #include <stdbool.h> //Include standard boolean header file to use true
 

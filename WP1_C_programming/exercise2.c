@@ -1,3 +1,8 @@
+// (C) Jessie Johnsson, Yingchao Ji, group: 10 (2024)
+// Work package 1
+// Exercise 2
+// Submission code: xxxxxxx (provided by your TA-s)
+
 #include <stdio.h> //Declare standard IO header
 #include <stdlib.h> //Declare standard library header
 #include <stdbool.h> //Declare standard boolean header
@@ -5,7 +10,7 @@
 
 int main (int argc, char *argv[]){ //Main function with argc(length of arguments) and argv(a pointer to an array of command line argument string) 
 
-    if(argc = 2){ //When argument is 2
+    if(argc == 2){ //When argument is 2
 
         int shiftNum = atoi(argv[1]); //Initialize shiftNum by converting the argument from string to integer
     
@@ -25,7 +30,7 @@ int main (int argc, char *argv[]){ //Main function with argc(length of arguments
         }
 
     }else { //If argument is not 2
-        printf("Usage: %s <Shift number>", argv[0]); //Print the Usage information
+        printf("Usage: %s <Shift number>\n", argv[0]); //Print the Usage information
     }
     
     return 0; //The program is successful with return 0
