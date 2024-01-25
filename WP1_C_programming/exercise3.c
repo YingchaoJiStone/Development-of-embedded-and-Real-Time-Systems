@@ -10,12 +10,13 @@
 #define MAX_NUMBER 10 // Define Max_NUMBER
 
 int main (int argc, char *argv[]){
+    
+    srand(time(NULL)); // Using current time as a seed to get different random number each time
 
     while(true){ // Using infinite while loop  until user want to end the game 
 
         int countGuess = 0; // Initialize countGuess is 0
 
-        srand(time(NULL)); // Using current time as a seed to get different random number each time
         int randomNum = rand() % 100 + 1; // Using rand() method + 1 to get random number that from 1 to 100
 
         while(countGuess < MAX_NUMBER){ // Using while loop until guess correctly or excedds the value MAX_NUMBER
