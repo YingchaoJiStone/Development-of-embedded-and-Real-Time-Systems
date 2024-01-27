@@ -3,9 +3,9 @@
 // Exercise 5
 // Submission code: xxxxxxx (provided by your TA-s)
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
+#include <stdio.h> // Declare standard IO header
+#include <stdlib.h> // Declare standard library header
+#include <time.h> // Declare time library header
 
 int MAX = 100; // Defines the maximum number of the values in the table
 int MAXNUMBER = 20; // Defines the maximum value of random numbers

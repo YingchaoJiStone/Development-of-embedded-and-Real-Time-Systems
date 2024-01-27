@@ -9,7 +9,7 @@
 #include <stdbool.h> // Declare the standard boolean library header
 #define MAX_NUMBER 10 // Define Max_NUMBER
 
-int main (int argc, char *argv[]){
+int main (int argc, char *argv[]){ //Main function with argc(length of arguments) and argv(a pointer to an array of command line argument) 
     
     srand(time(NULL)); // Using current time as a seed to get different random number each time
 

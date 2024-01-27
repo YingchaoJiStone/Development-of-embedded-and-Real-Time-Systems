@@ -8,7 +8,7 @@
 #include <stdbool.h> //Declare standard boolean header
 #include <string.h> //Declare string header
 
-int main (int argc, char *argv[]){ //Main function with argc(length of arguments) and argv(a pointer to an array of command line argument string) 
+int main (int argc, char *argv[]){ //Main function with argc(length of arguments) and argv(a pointer to an array of command line argument) 
 
     if(argc == 2){ //When argument is 2
 
