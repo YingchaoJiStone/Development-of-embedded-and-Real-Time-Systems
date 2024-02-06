@@ -120,14 +120,24 @@ void search_by_firstname(char *name){
     }
 
     PERSON temp; // Declare temprary PERSON temp
+    int countPerson = 0; // Declare countPerson is 0 to count the number of person
+    int countMatch = 0;  // Declare countMatch is 0 to count the number of matching
     // Loop through the PERSON data in the file until the file ends or an error occurs. While the result of fread function is 1 mean successful read 1 PERSON.
     while (fread(&temp, sizeof(PERSON), 1, file) == 1) { // Each time fread is called, the file pointer automatically moves forward based on the number of bytes read
-
+        countPerson ++; // countPerson + 1 whenever a person is found
         if (strcmp(temp.firstname, name) == 0) { // If the first name is equal the name
+            countMatch ++;
             printf("%s %s\n", temp.firstname, temp.famname); // Print the person full name
         }
     }
-
+    if (countPerson == 0) { // When no person is found
+        printf("The list in file is empty.\n"); // Print empty prompt
+    }else {
+        if (countMatch == 0) { // When no person is matching
+            printf("No person matching.\n"); // Print no matching prompt
+        }
+    }
+    
     fclose(file); // Close file after read
 }
 
