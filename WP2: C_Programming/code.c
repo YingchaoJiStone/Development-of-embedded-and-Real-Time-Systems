@@ -1,7 +1,7 @@
 // (C) Jessie Johnsson, Yingchao Ji, group: 10 (2024)
 // Work package 1
 // Exercise 4
-// Submission code: xxxxxx (provided by your TA-s)
+// Submission code: 018451 (provided by your TA-s)
 
 #include <stdio.h> // Declare standard IO header
 #include <stdlib.h> // Declare standard library header
@@ -46,7 +46,7 @@ int main(int argc, char *argv[]) { // Main function with arguments
     binNum = (binNum << 1) | arg4; // Convert argument 4 to binary. 1 bit 
     binNum = (binNum << 1) | arg5; // Convert argument 5 to binary. 1 bit 
 
-    printf("%X", binNum); // Print the number in hexadecimal format
+    printf("%X\n", binNum); // Print the number in hexadecimal format
 
     return 0; // End program successful
 }

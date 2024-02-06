@@ -1,7 +1,7 @@
 // (C) Jessie Johnsson, Yingchao Ji, group: 10 (2024)
 // Work package 1
 // Exercise 3
-// Submission code: xxxxxx (provided by your TA-s)
+// Submission code: 018451 (provided by your TA-s)
 
 #include <stdbool.h> // Declare standard boolean header
 #include <stdio.h> // Declare standard IO header
@@ -127,7 +127,7 @@ void search_by_firstname(char *name){
         countPerson ++; // countPerson + 1 whenever a person is found
         if (strcmp(temp.firstname, name) == 0) { // If the first name is equal the name
             countMatch ++;
-            printf("%s %s\n", temp.firstname, temp.famname); // Print the person full name
+            printf("%s %s %s\n", temp.firstname, temp.famname, temp.pers_number); // Print the person full name
         }
     }
     if (countPerson == 0) { // When no person is found
