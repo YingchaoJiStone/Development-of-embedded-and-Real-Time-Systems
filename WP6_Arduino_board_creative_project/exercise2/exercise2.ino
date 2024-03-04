@@ -8,8 +8,8 @@
 #define LEDS_NUM 4 // Define number of leds
 
 int ledPins[] = {5, 4, 3, 2}; // Initialize ledPins array to store the led pins
-unsigned long previousTime = 0;
-int intervalTime = 100;
+unsigned long previousTime = 0; // Initialize previousTime is  0
+int intervalTime = 100; // Initialize intervalTime is 0.1 second
 
 void setup(){
   Serial.begin(9600); // Start serial communication
@@ -26,14 +26,14 @@ void loop(){
   Serial.println(distance); // Print the distance in centimeters
   
   int num = map(distance, 30, 200, 4, 0); // Mapping distance to number of leds
-  if(distance < 30){
-  	num = -1;
+  if(distance < 30){ // When distance less than 30cm
+  	num = -1; // Set num is -1 to blink led
   }
-  if(distance > 200){
-  	num = 0;
+  if(distance > 200){ // If distance greater than 200cm
+  	num = 0; // Set num is 0 to turn off all leds
   }
     
-  Serial.println(num);
+  Serial.println(num); // Print num
 
   turnOnLeds(num); // Invoke turnOnLeds function to turn on leds base on num
   
@@ -56,7 +56,7 @@ long readUltrasonicDuration(int triggerPin, int echoPin){ // readUltrasonicDurat
 }
 
 void turnOnLeds(int num){
-  if(num >= 0){
+  if(num >= 0){ // When num > 0
   	// Turn on the leds base on num
     for(int i = 0; i < num; i ++){ // Loop num times
       digitalWrite(ledPins[i], HIGH); // Turn on the led
@@ -66,14 +66,14 @@ void turnOnLeds(int num){
       digitalWrite(ledPins[i], LOW); // Turn off the led
     }
   }else{
-    unsigned long currentTime = millis();
-    if(currentTime - previousTime >= intervalTime){
-      previousTime = currentTime;
-      if(digitalRead(ledPins[3]) == LOW){
+    unsigned long currentTime = millis(); // Get currentTime as millisecond
+    if(currentTime - previousTime >= intervalTime){ // If time pass intervalTime
+      previousTime = currentTime; // Set previousTime is currentTIme
+      if(digitalRead(ledPins[3]) == LOW){ // If leds are low, turn on them
           for(int i = 0; i < 4; i ++){ // Loop num times
             digitalWrite(ledPins[i], HIGH); // Turn on the led
           }
-      }else{
+      }else{ // If leds are high, turn off them to implement blink
           for(int i = 0; i < 4; i ++){ // Loop num times
             digitalWrite(ledPins[i], LOW); // Turn on the led
           }
